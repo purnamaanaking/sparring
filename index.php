@@ -1,3 +1,3 @@
 <?php
-	header('Location: csv/main.php');
+	header('Location: app/main.php');
 ?>
