@@ -18,7 +18,8 @@
 			// Setup Result View
 			include('views/result_view.php');
 		} else {
-			echo '<h1>Kata Kunci Tidak Boleh Kosong</h1>';
+			// Show Error View
+			include('views/error_view.php');
 		}
 	} else {
 		// Setup Input Form
