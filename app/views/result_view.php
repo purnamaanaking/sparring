@@ -119,9 +119,9 @@
                         <th style="border: 1px solid;">Sentiment</th>
                     </tr>
                     <tr>
-                        <? foreach ($result as $data) { ?>
-                            <td style="border: 1px solid;"><? echo $data ?></td>
-                        <? } ?>
+                        <?php foreach ($result as $data) { ?>
+                            <td style="border: 1px solid;"><?php echo $data ?></td>
+                        <?php } ?>
                     </tr>
                 </table> -->
             </div>
