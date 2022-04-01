@@ -21,7 +21,7 @@
 						<div class="nav nav-masthead justify-content-center float-md-end align-items-center">
 							<a class="nav-link active" href="../">Home</a>
 							<a class="nav-link" href="#">Daftar Peneliti</a>
-							<a class="nav-link" href="#">Tentang</a>
+							<a class="nav-link" href="#">Tentang Algoritma</a>
 						</div>
 					</div>
 				</nav>
