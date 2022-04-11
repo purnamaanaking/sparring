@@ -6,35 +6,37 @@
 		}
 		
 		private $model;
-		private $category = 2;
 		
-		function get_sentiment_result($teks) {
-			//echo $teks.'<br><br>';echo strpos($teks, 'a');
-			
+		function get_sentiment_result($text) {
 			$sum_keywords = $this->model->get_total_sum();
 			$all_keywords = $this->model->get_all_keywords();
 			$result = array();
+		
+			$lec_val = 0.5;
 			
-			$neg_val = 0.5;
-			$pos_val = 0.5;
-			
-			foreach ($all_keywords as $row) {
-				if (strpos($teks, $row['teks']) !== false){
-					$neg_val *= ($row['Nscore']+1) / $sum_keywords['total'];
-					$pos_val *= ($row['Pscore']+1) / $sum_keywords['total'];
-				}
+			// Get Lecturers
+			$lecturers = mysql_query("SELECT * FROM lecturers");
+			$rows = array();
+			while ($row = mysql_fetch_array($lecturers)) {
+				$rows[] = $row;
 			}
-			
-			if ($pos_val > $neg_val) $sentiment = 'positive';
-			else $sentiment = 'negative';
-				
-			$result = array(
-				'indexpos' => $pos_val,
-				'indexneg' => $neg_val,
-				'sentiment' => $sentiment
-			);
-			
-			// var_dump($result);
+			foreach($rows as $index => $row){
+				// Setup result array
+				$result[$index]['id'] = $row['id'];
+				$result[$index]['name'] = $row['name'];
+				$result[$index]['nidn'] = $row['nidn'];
+				$result[$index]['department'] = $row['department'];
+				$result[$index]['key_col_name'] = $row['key_col_name'];
+
+				foreach ($all_keywords as $keyword) {
+					if (strpos($text, $keyword['text']) !== false){
+						$lec_val *= ($keyword[$row['key_col_name']] + 1) / $sum_keywords['total'];
+					}
+				}
+
+				$result[$index]['value'] = $lec_val;
+			}
+
 			return $result;
 		}
 	}

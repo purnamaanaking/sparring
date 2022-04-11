@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SPARRING - LPPM ITTelkom Surabaya</title>
-	<link rel="icon" href="assets/favicon.png" sizes="32x32" />
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+	<?php include('head_view.php') ?>
 </head>
 <body class="d-flex h-100 text-center">
     <div class="d-flex w-100 h-100 mx-auto flex-column">
@@ -36,8 +30,8 @@
                         <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
                     </svg>
                 </div>
-                <h1 class="display-4">Oops, Topik Penelitian<br>Tidak Boleh Kosong</h1>
-                <a href="/sparring" class="btn btn-outline-dark btn-lg mt-4">Kembali ke Halaman Pencarian</a>
+                <h1 class="display-6">Oops, Topik Penelitian<br>Tidak Boleh Kosong</h1>
+                <a href="/sparring" class="btn btn-outline-dark mt-4">Kembali ke Halaman Pencarian</a>
             </div>
 		</main>
 
