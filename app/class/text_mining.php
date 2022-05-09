@@ -7,7 +7,7 @@
 		
 		private $model;
 		
-		function get_result($text) {
+		function get_result($search_keywords) {
 			$all_keywords = $this->model->get_all_keywords();
 			$result = array();
 			
@@ -31,7 +31,7 @@
 				$sum_keywords = $this->model->get_total_sum($row['key_col_name']);
 
 				foreach ($all_keywords as $keyword) {
-					if (strpos($text, $keyword['text']) !== false){
+					if (stripos($search_keywords, $keyword['text']) !== false){
 						$lec_val += $keyword[$row['key_col_name']] / $sum_keywords;
 					}
 				}

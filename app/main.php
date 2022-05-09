@@ -7,11 +7,11 @@
 			include('class/text_mining.php');
 			
 			// Get Keyword
-			$keyword = $_POST['keyword'];
+			$search_keywords = $_POST['keyword'];
 
 			// Get Result
-			$textMining = new Text_mining();
-			$results = $textMining->get_result($keyword);
+			$text_mining = new Text_mining();
+			$results = $text_mining->get_result($search_keywords);
 
 			// Setup Result View
 			include('views/result_view.php');
