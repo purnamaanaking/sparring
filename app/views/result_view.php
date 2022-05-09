@@ -19,7 +19,7 @@
 						<div class="nav nav-masthead justify-content-center float-md-end align-items-center">
 							<a class="nav-link" href="../">Beranda</a>
 							<a class="nav-link" href="../app/researcher.php">Daftar Peneliti</a>
-							<a class="nav-link" href="../app/about.php">Tentang Sparring</a>
+							<a class="nav-link" href="../app/about.php">Tentang Algoritma</a>
 						</div>
 					</div>
 				</nav>
@@ -138,7 +138,7 @@
                                             <div class="col-md-4"><strong>Nilai</strong></div>
                                             <div class="col-md-8 pe-0">
                                                 <div class="badge bg-primary">
-                                                    <?php echo $result['value'] ?>
+                                                    <?php echo $result['value'] ?> %
                                                 </div>
                                             </div>
                                         </div>

@@ -19,7 +19,7 @@
 						<div class="nav nav-masthead justify-content-center float-md-end align-items-center">
 							<a class="nav-link" href="../">Beranda</a>
 							<a class="nav-link active" href="../app/researcher.php">Daftar Peneliti</a>
-							<a class="nav-link" href="../app/about.php">Tentang Sparring</a>
+							<a class="nav-link" href="../app/about.php">Tentang Algoritma</a>
 						</div>
 					</div>
 				</nav>

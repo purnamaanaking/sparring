@@ -9,9 +9,9 @@
 			// Get Keyword
 			$keyword = $_POST['keyword'];
 
-			// Get Sentiment Result
+			// Get Result
 			$textMining = new Text_mining();
-			$results = $textMining->get_sentiment_result($keyword);
+			$results = $textMining->get_result($keyword);
 
 			// Setup Result View
 			include('views/result_view.php');

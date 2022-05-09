@@ -5,7 +5,7 @@
 		}
 		
 		function get_all_keywords() {
-			$query = "SELECT * FROM keyword";
+			$query = "SELECT * FROM keywords";
 			$result = mysql_query($query);
 			
 			$arr = array();
@@ -16,35 +16,18 @@
 			return $arr;
 		}
 		
-		function get_total_sum() {
-			$cquery = "SELECT COUNT(*) as count FROM keyword";
-			$cresult = mysql_query($cquery);
-			$c = 0;
+		function get_total_sum($key_column_name) {
 			$total = 0;
 
-			while ($row = mysql_fetch_array($cresult)) {
-				$c = $row['count'];
+			$query = "SELECT SUM(".$key_column_name.") as total FROM keywords";
+			$result = mysql_query($query);
+			$sum = 0;
+			while ($item = mysql_fetch_array($result)) {
+				$sum = $item['total'];
 			}
-
-			// Get lecturers for looping
-			$lecturers = mysql_query("SELECT * FROM lecturers");
-			$rows = array();
-			while ($row = mysql_fetch_array($lecturers)) {
-				$rows[] = $row;
-			}
-			foreach($rows as $row){
-				$query = "SELECT SUM(".$row['key_col_name'].") as total FROM keyword";
-				$result = mysql_query($query);
-				$sum = 0;
-				while ($item = mysql_fetch_array($result)) {
-					$sum = $item['total'] + $c;
-				}
-				$total += $sum;
-			}
+			$total += $sum;
 			
-			return array(
-				'total' => $total
-			);
+			return $total;
 		}
 	}
 ?>
