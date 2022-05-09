@@ -128,11 +128,11 @@
                                         </div>
                                         <div class="row mb-1 border-bottom pb-1">
                                             <div class="col-md-4"><strong>NIDN / NIP</strong></div>
-                                            <div class="col-md-8 pe-0"><?php echo $result['nidn'].' / 234567789' ?></div>
+                                            <div class="col-md-8 pe-0"><?php echo $result['nidn'].' / '.$result['nip'] ?></div>
                                         </div>
                                         <div class="row mb-1 border-bottom pb-1">
                                             <div class="col-md-4"><strong>Email / Telepon</strong></div>
-                                            <div class="col-md-8 pe-0">email@email.com / 08123456789</div>
+                                            <div class="col-md-8 pe-0"><?php echo $result['email'].' / '.$result['phone'] ?></div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4"><strong>Nilai</strong></div>

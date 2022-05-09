@@ -22,9 +22,11 @@
 
 				// Setup result array
 				$result[$index]['id'] = $row['id'];
-				$result[$index]['name'] = $row['name'];
-				$result[$index]['nidn'] = $row['nidn'];
-				$result[$index]['department'] = $row['department'];
+				$result[$index]['name'] = $row['name'] ? $row['name'] : '-';
+				$result[$index]['nidn'] = $row['nidn'] ? $row['nidn'] : '-';
+				$result[$index]['nip'] = $row['nip'] ? $row['nip'] : '-';
+				$result[$index]['email'] = $row['email'] ? $row['email'] : '-';
+				$result[$index]['phone'] = $row['phone'] ? $row['phone'] : '-';
 				$result[$index]['key_col_name'] = $row['key_col_name'];
 
 				// Get Total Keyword by Key Col Name
