@@ -71,83 +71,104 @@
 
             <div class="cover-container m-auto p-3">
                 <div class="p-0">
+                    <!-- Tab Header -->
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Semua</button>
+                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#all-data" type="button" role="tab">Semua</button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">SE</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">IT</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">IS</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">DB</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">IF</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">DS</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">EE</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">CE</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">TE</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">IE</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">LE</button>
-                        </li>
+                        
+                        <?php foreach($departments as $department) { ?>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="<?php echo '#'.$department['code'] ?>" type="button" role="tab"><?php echo $department['code'] ?></button>
+                            </li>
+                        <?php } ?>
                     </ul>
+
+                    <!-- Tab Content -->
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                            <?php foreach($results as $index => $result) { ?>
-                                <div class="row mb-3 shadow-sm p-4 bg-light m-0">
-                                    <div class="col-md-2">
-                                        <div class="mb-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
-                                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
-                                            </svg>
+                        <div class="tab-pane fade show active" id="all-data" role="tabpanel">
+                            <?php if(count($all_data_result) != 0) { ?>
+                                <?php foreach($all_data_result as $index => $result) { ?>
+                                    <div class="row mb-3 shadow-sm p-4 bg-light m-0">
+                                        <div class="col-md-2">
+                                            <div class="mb-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
+                                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+                                                </svg>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-10 text-start">
-                                        <div class="row mb-1 border-bottom pb-1">
-                                            <div class="col-md-4"><strong>Nama</strong></div>
-                                            <div class="col-md-8 pe-0"><?php echo $result['name'] ?></div>
-                                        </div>
-                                        <div class="row mb-1 border-bottom pb-1">
-                                            <div class="col-md-4"><strong>NIDN / NIP</strong></div>
-                                            <div class="col-md-8 pe-0"><?php echo $result['nidn'].' / 234567789' ?></div>
-                                        </div>
-                                        <div class="row mb-1 border-bottom pb-1">
-                                            <div class="col-md-4"><strong>Email / Telepon</strong></div>
-                                            <div class="col-md-8 pe-0">email@email.com / 08123456789</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4"><strong>Nilai</strong></div>
-                                            <div class="col-md-8 pe-0">
-                                                <div class="badge bg-primary">
-                                                    <?php echo $result['value'] ?> %
+                                        <div class="col-md-10 text-start">
+                                            <div class="row mb-1 border-bottom pb-1">
+                                                <div class="col-md-4"><strong>Nama</strong></div>
+                                                <div class="col-md-8 pe-0"><?php echo $result['name'] ?></div>
+                                            </div>
+                                            <div class="row mb-1 border-bottom pb-1">
+                                                <div class="col-md-4"><strong>NIDN / NIP</strong></div>
+                                                <div class="col-md-8 pe-0"><?php echo $result['nidn'].' / '.$result['nip'] ?></div>
+                                            </div>
+                                            <div class="row mb-1 border-bottom pb-1">
+                                                <div class="col-md-4"><strong>Email / Telepon</strong></div>
+                                                <div class="col-md-8 pe-0"><?php echo $result['email'].' / '.$result['phone'] ?></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4"><strong>Nilai</strong></div>
+                                                <div class="col-md-8 pe-0">
+                                                    <div class="badge bg-primary">
+                                                        <?php echo $result['value'] ?> %
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                <?php } ?>
+                            <?php } else { ?>
+                                <h6>Maaf, belum ada data.</h6>
                             <?php } ?>
                         </div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+
+                        <?php foreach($departments as $department) { ?>
+                            <div class="tab-pane fade show" id="<?php echo $department['code'] ?>" role="tabpanel">
+                                <?php if(count($by_department_result[$department['code']]) != 0) { ?>
+                                    <?php foreach($by_department_result[$department['code']] as $by_department_result_item) { ?>
+                                        <div class="row mb-3 shadow-sm p-4 bg-light m-0">
+                                            <div class="col-md-2">
+                                                <div class="mb-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
+                                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 text-start">
+                                                <div class="row mb-1 border-bottom pb-1">
+                                                    <div class="col-md-4"><strong>Nama</strong></div>
+                                                    <div class="col-md-8 pe-0"><?php echo $by_department_result_item['name'] ?></div>
+                                                </div>
+                                                <div class="row mb-1 border-bottom pb-1">
+                                                    <div class="col-md-4"><strong>NIDN / NIP</strong></div>
+                                                    <div class="col-md-8 pe-0"><?php echo $by_department_result_item['nidn'].' / '.$by_department_result_item['nip'] ?></div>
+                                                </div>
+                                                <div class="row mb-1 border-bottom pb-1">
+                                                    <div class="col-md-4"><strong>Email / Telepon</strong></div>
+                                                    <div class="col-md-8 pe-0"><?php echo $by_department_result_item['email'].' / '.$by_department_result_item['phone'] ?></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4"><strong>Nilai</strong></div>
+                                                    <div class="col-md-8 pe-0">
+                                                        <div class="badge bg-primary">
+                                                            <?php echo $by_department_result_item['value'] ?> %
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                <?php } else { ?>
+                                    <h6>Maaf, belum ada data.</h6>
+                                <?php } ?>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
