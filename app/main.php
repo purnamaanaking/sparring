@@ -1,5 +1,5 @@
 <?php
-	$formAction = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '';
+	$formAction = "https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '';
 
 	if (isset($_POST['submit'])) {
 		if ($_POST['keyword'] != null) {
