@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 09, 2022 at 11:03 AM
--- Server version: 10.4.21-MariaDB
+-- Generation Time: May 19, 2022 at 12:09 PM
+-- Server version: 5.7.34-log
 -- PHP Version: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sparring`
+-- Database: `sql_sparring_ppm`
 --
 
 -- --------------------------------------------------------
@@ -57,7 +57,7 @@ INSERT INTO `departments` (`id`, `code`, `name`) VALUES
 --
 
 CREATE TABLE `keywords` (
-  `id` int(100) NOT NULL,
+  `id` int(11) NOT NULL,
   `text` varchar(255) NOT NULL,
   `mnp` int(255) NOT NULL,
   `pur` int(255) NOT NULL,
@@ -109,6 +109,12 @@ INSERT INTO `lecturers` (`id`, `name`, `nidn`, `key_col_name`, `department_id`, 
 -- Indexes for table `departments`
 --
 ALTER TABLE `departments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `keywords`
+--
+ALTER TABLE `keywords`
   ADD PRIMARY KEY (`id`);
 
 --
