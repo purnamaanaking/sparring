@@ -5,7 +5,7 @@
 </head>
 <body class="d-flex h-100 text-center">
     <div class="d-flex w-100 h-100 mx-auto flex-column">
-	<header class="mb-auto shadow-sm">
+		<header class="mb-auto shadow-sm">
 			<div class="cover-container m-auto">
 				<nav class="navbar">
 					<div class="container-fluid navbar-layout">
