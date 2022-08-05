@@ -114,9 +114,15 @@
                                             <div class="row">
                                                 <div class="col-md-4"><strong>Nilai</strong></div>
                                                 <div class="col-md-8 pe-0">
-                                                    <div class="badge bg-primary">
-                                                        <?php echo $result['value'] ?> %
-                                                    </div>
+                                                    <?php if($result['value'] != 0) { ?>
+                                                        <div class="badge bg-primary">
+                                                            <?php echo $result['value'] ?> %
+                                                        </div>
+                                                    <?php } else { ?>
+                                                        <div class="badge bg-secondary">
+                                                            <?php echo $result['value'] ?> %
+                                                        </div>
+                                                    <?php } ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -156,9 +162,15 @@
                                                 <div class="row">
                                                     <div class="col-md-4"><strong>Nilai</strong></div>
                                                     <div class="col-md-8 pe-0">
-                                                        <div class="badge bg-primary">
-                                                            <?php echo $by_department_result_item['value'] ?> %
-                                                        </div>
+                                                        <?php if($by_department_result_item['value'] != 0) { ?>
+                                                            <div class="badge bg-primary">
+                                                                <?php echo $by_department_result_item['value'] ?> %
+                                                            </div>
+                                                        <?php } else { ?>
+                                                            <div class="badge bg-secondary">
+                                                                <?php echo $by_department_result_item['value'] ?> %
+                                                            </div>
+                                                        <?php } ?>
                                                     </div>
                                                 </div>
                                             </div>
