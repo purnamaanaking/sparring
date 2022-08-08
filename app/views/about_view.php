@@ -44,11 +44,19 @@
             </div>
 
             <div class="cover-container m-auto p-3 text-start">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla eleifend urna laoreet sodales. Sed et posuere tellus. Quisque maximus lacus eros, non efficitur augue tristique sit amet. Nulla ligula quam, condimentum at turpis vel, interdum viverra mi. Cras quis mauris non lorem condimentum cursus eu nec arcu. Nunc lorem metus, tincidunt blandit maximus tempus, scelerisque vel sapien. Etiam malesuada id ipsum vel dictum. In a hendrerit dui.</p>
+                <p>Sistem Partner Research Matching merupakan program perekomendasi rekan peneliti dengan menggunakan pendekatan algoritma klasifikasi Naive Bayes dan fungsi aktivasi Sigmoid. Data yang digunakan adalah dari publikasi yang telah dihasilkan oleh civitas akademika IT Telkom Surabaya baik dari pengindeks Google Scholar maupun Scopus.</p>
 
-                <p>Sed at sapien facilisis, mattis justo et, faucibus ligula. Fusce quis pharetra justo. Etiam id lacinia lorem. Nullam commodo rhoncus risus, quis rutrum arcu pellentesque vitae. Fusce sed imperdiet ligula. Sed sagittis purus dolor, nec dapibus metus maximus vel. Cras accumsan diam ut lacus varius vestibulum. Cras tempor in massa et mollis. Sed consectetur porttitor nisi, id efficitur felis dapibus ut. Maecenas id maximus turpis. Nunc non mollis enim, eu molestie turpis. Nullam vitae rutrum mi, ut sagittis est. Aliquam erat volutpat. Fusce efficitur nisl diam, sit amet interdum ex congue at. Phasellus at erat massa. Phasellus id luctus nisl.</p>
+				<p>Kata kunci (keywords) dari tiap publikasi menjadi data masukan, lalu dikalkulasi total publikasi untuk setiap peneliti/dosen. Fungsi aktivasi Sigmoid berperan sebagai pengubah keluaran algoritma klasifikasi menjadi rentang 0-1. Kemudian nilai keluaran diubah menjadi persentase.</p>
 
-                <p>Pellentesque tristique dolor quis leo porttitor gravida. Phasellus bibendum odio a interdum suscipit. Etiam lectus justo, ornare vitae viverra vitae, bibendum in metus. Etiam semper, odio ut malesuada suscipit, nisl leo volutpat nisl, consectetur cursus urna magna vitae felis. Cras at blandit purus, vitae suscipit mauris. In sit amet erat mollis, suscipit dolor vel, euismod mauris. Sed et lacus vel lorem ultricies fermentum. Sed id nisl ut nisl laoreet consequat eget id lorem. Sed sed tincidunt arcu.</p>
+				<p>Program ini dibangun dalam rangka penelitian penugasan skema terapan LPPM periode Januari 2022 yang beranggotakan:</p>
+
+				<ul>
+					<li>Mochamad Nizar Palefi Ma'ady, S.Kom., M.Kom., M.IM.</li>
+					<li>Purnama Anaking, S.Kom., M.Kom.</li>
+					<li>Muhammad Dzulfikar Fauzi, S.Kom., M.Cs.</li>
+				</ul>
+
+				<p>Kode program dapat diunduh melalui Github berikut: <a href="https://github.com/purnamaanaking/sparring" target="_blank">https://github.com/purnamaanaking/sparring</a></p>
             
                 <p><strong>Version code: 1.0</strong></p>
             </div>
